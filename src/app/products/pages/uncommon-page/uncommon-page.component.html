@@ -46,14 +46,24 @@
 
 
   <p-fieldset legend="Json Pipe" [toggleable]="true">
-
+    {{person | json}}
   </p-fieldset>
+
 
   <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
-
+    <ul>
+      <li *ngFor="let item of person | keyvalue">
+        <b> {{item.key | titlecase}} : </b> {{item.value}}
+      </li>
+    </ul>
   </p-fieldset>
 
+
   <p-fieldset legend="Async Pipe" [toggleable]="true">
+    <pre>
+      <--no cancela promesas -->
+      {{myObservableTimer | async}}
+    </pre> 
 
   </p-fieldset>
 

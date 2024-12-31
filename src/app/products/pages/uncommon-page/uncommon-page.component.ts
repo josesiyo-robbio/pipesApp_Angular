@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {interval} from 'rxjs';
 
 @Component({
   selector: 'app-uncommon-page',
@@ -26,6 +27,16 @@ export class UncommonPageComponent
 
   public clients : string[] = ['maria','fernanda','steve','jose','angelica'];
 
+  public person =
+    {
+      name : 'fernanada',
+      age : 30,
+      address : 'Lorem Ipsum',
+
+    }
+
+    public myObservableTimer  = interval(2000);
+
 
   changeClient()
   {
@@ -37,4 +48,6 @@ export class UncommonPageComponent
   deleteClient() {
     this.clients.pop();
   }
+
+
 }

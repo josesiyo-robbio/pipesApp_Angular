@@ -11,8 +11,34 @@
     <div class="text-lg font-bold">lowercase</div>
     {{ nameLower | lowercase }}
   </div>
+
   <div class=" p-4 rounded shadow">
     <div class="text-lg font-bold">titlecase</div>
     {{ fullName | titlecase }}
   </div>
+
+  <div class=" p-6 rounded shadow">
+    <div class="text-lg font-bold">titlecase</div>
+    <ol>
+      <li>date</li>
+      <li>date | date</li>
+      <li> date | date:'short'</li>
+      <li> date | date:'long'</li>
+      <li> date | date:'MMM'</li>
+      <li> date | date:'MMM dd, yyyy'</li>
+    </ol>
+  </div>
+
+  <div class=" p-6 rounded shadow">
+    <div class="text-lg font-bold">titlecase</div>
+    <ol>
+      <li>{{customDate}}</li>
+      <li>{{customDate | date}}</li>
+      <li> {{customDate | date:'short'}}</li>
+      <li> {{customDate | date:'long'}}</li>
+      <li> {{customDate | date:'MMM'}}</li>
+      <li> {{customDate | date:'MMM dd, yyyy'}}</li>
+    </ol>
+  </div>
+
 </div>

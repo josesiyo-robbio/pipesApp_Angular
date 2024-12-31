@@ -1,44 +1,39 @@
 <p-panel header="Basics Pipes" class="pt-5 mt-4">
-  <p> Included pipes in Angular Common</p>
+  <p>Included pipes in Angular Common</p>
 </p-panel>
 
 <div class="grid grid-cols-3 gap-4 mt-10">
-  <div class=" p-4 rounded shadow">
-    <div class="text-lg font-bold">uppercase</div>
+  <p-card header="uppercase">
     {{ nameUpper | uppercase }}
-  </div>
-  <div class=" p-4 rounded shadow">
-    <div class="text-lg font-bold">lowercase</div>
+  </p-card>
+
+  <p-card header="lowercase">
     {{ nameLower | lowercase }}
-  </div>
+  </p-card>
 
-  <div class=" p-4 rounded shadow">
-    <div class="text-lg font-bold">titlecase</div>
+  <p-card header="titlecase">
     {{ fullName | titlecase }}
-  </div>
+  </p-card>
 
-  <div class=" p-6 rounded shadow">
-    <div class="text-lg font-bold">titlecase</div>
+  <p-card header="Date Pipe Examples">
     <ol>
       <li>date</li>
       <li>date | date</li>
-      <li> date | date:'short'</li>
-      <li> date | date:'long'</li>
-      <li> date | date:'MMM'</li>
-      <li> date | date:'MMM dd, yyyy'</li>
+      <li>date | date:'short'</li>
+      <li>date | date:'long'</li>
+      <li>date | date:'MMM'</li>
+      <li>date | date:'MMM dd, yyyy'</li>
     </ol>
-  </div>
+  </p-card>
 
-  <div class=" p-6 rounded shadow">
-    <div class="text-lg font-bold">titlecase</div>
+  <p-card header="Custom Date Pipe Examples">
     <ol>
-      <li>{{customDate}}</li>
-      <li>{{customDate | date}}</li>
-      <li> {{customDate | date:'short'}}</li>
-      <li> {{customDate | date:'long'}}</li>
-      <li> {{customDate | date:'MMM'}}</li>
-      <li> {{customDate | date:'MMM dd, yyyy'}}</li>
+      <li>{{ customDate }}</li>
+      <li>{{ customDate | date }}</li>
+      <li>{{ customDate | date:'short' }}</li>
+      <li>{{ customDate | date:'long' }}</li>
+      <li>{{ customDate | date:'MMM' }}</li>
+      <li>{{ customDate | date:'MMM dd, yyyy' }}</li>
     </ol>
-  </div>
-
+  </p-card>
 </div>

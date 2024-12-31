@@ -1,1 +1,25 @@
-<p>numbers-page works!</p>
+<p-panel header="Basics Pipes" class="pt-5 mt-4">
+  <p>Included pipes in Angular Common</p>
+</p-panel>
+
+<div class="grid grid-cols-3 gap-4 mt-10">
+
+  <p-card >
+    <ng-template #title> Ventas Netas </ng-template>
+    <ng-template #subtitle> Del presente año </ng-template>
+    {{ (totalSeals + 6786876) | number:'1.2-2' }}
+  </p-card>
+
+  <p-card >
+    <ng-template #title> Ventas Brutas </ng-template>
+    <ng-template #subtitle> Del presente año </ng-template>
+    {{ totalSeals | currency : 'USD':'symbol-narrow':'1.4-4' }}
+  </p-card>
+
+  <p-card >
+    <ng-template #title> Ganancia Porcentual </ng-template>
+    <ng-template #subtitle> Del presente año </ng-template>
+    {{ percent | percent : '1.2-2' }}
+  </p-card>
+
+  </div>

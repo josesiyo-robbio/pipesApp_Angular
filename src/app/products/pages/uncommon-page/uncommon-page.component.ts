@@ -16,7 +16,15 @@ export class UncommonPageComponent
   public invitationMap = {
     'male' : 'invitarlo',
     'female' : 'invitarla'
-  }
+  };
+
+  public clientsMap = {
+    '=0' : 'no tenemos ningun cliente esperando',
+    '=1' : 'tenemos un cliente esperando',
+    'other' : 'tenemos # clientes esperando'
+  };
+
+  public clients : string[] = ['maria','fernanda','steve','jose','angelica'];
 
 
   changeClient()
@@ -24,5 +32,9 @@ export class UncommonPageComponent
     this.namePerson = 'Steve';
     this.gender = 'male';
 
+  }
+
+  deleteClient() {
+    this.clients.pop();
   }
 }

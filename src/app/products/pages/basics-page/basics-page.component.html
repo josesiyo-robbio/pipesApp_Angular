@@ -1,30 +1,18 @@
-
-
-<p-panel [showHeader]="false">
-  <h1>Basics Pipes</h1>
+<p-panel header="Basics Pipes" class="pt-5 mt-4">
   <p> Included pipes in Angular Common</p>
 </p-panel>
 
-
-
-<div class="p-grid">
-
-  <div class="p-col-4">
-    <p-card header="uppercase ">
-      {{nameUpper | uppercase}}
-    </p-card>
+<div class="grid grid-cols-3 gap-4 mt-10">
+  <div class=" p-4 rounded shadow">
+    <div class="text-lg font-bold">uppercase</div>
+    {{ nameUpper | uppercase }}
   </div>
-
-  <div class="p-col-4">
-    <p-card header="lowercase">
-      {{nameLower | lowercase}}
-    </p-card>
+  <div class=" p-4 rounded shadow">
+    <div class="text-lg font-bold">lowercase</div>
+    {{ nameLower | lowercase }}
   </div>
-
-  <div class="p-col-4">
-    <p-card header="titlecase">
-      {{fullName | titlecase}}
-    </p-card>
+  <div class=" p-4 rounded shadow">
+    <div class="text-lg font-bold">titlecase</div>
+    {{ fullName | titlecase }}
   </div>
-
 </div>

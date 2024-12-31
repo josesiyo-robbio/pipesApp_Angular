@@ -7,11 +7,11 @@
   <ng-template #start>
     <p-button  label="ToggleCase" icon="pi pi-sort" class="mr-2" text severity="secondary"  (onClick)="toggleUpperCase()"/>
 
-    <p-button label="By name" icon="pi pi-sort" class="mr-2" text severity="secondary" />
+    <p-button label="By name" icon="pi pi-sort" class="mr-2" text severity="secondary" (onClick)="changeOrderBy('name')" />
 
-    <p-button  label="By fly" icon="pi pi-sort" text severity="secondary" />
+    <p-button  label="By fly" icon="pi pi-sort" text severity="secondary"  (onClick)="changeOrderBy('canFly')" />
 
-    <p-button  label="By Color" icon="pi pi-sort" text severity="secondary" />
+    <p-button  label="By Color" icon="pi pi-sort" text severity="secondary" (onClick)="changeOrderBy('color')"/>
 
   </ng-template>
 
@@ -20,7 +20,7 @@
 <p-panel header="Heroes">
   <div class="grid">
     <div class="col mt-2">
-      <p-table [value]="heroes" [tableStyle]="{ 'min-width': '50rem' }">
+      <p-table [value]="heroes | sortBy : orderBy " [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template #header>
           <tr>
             <th>Name</th>

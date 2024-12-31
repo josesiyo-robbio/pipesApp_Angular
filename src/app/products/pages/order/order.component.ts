@@ -13,6 +13,7 @@ import {Color, Hero} from '../../interfaces/hero.interface';
 export class OrderComponent
 {
   public isUpperCase : boolean = true;
+  public orderBy : keyof Hero | undefined | '' = '';
 
   toggleUpperCase () : void {
     this.isUpperCase = !this.isUpperCase;
@@ -36,7 +37,13 @@ export class OrderComponent
       canFly: true,
       color : Color.pink,
     },
-  ]
+  ];
+
+  changeOrderBy (value : keyof Hero) : void
+  {
+    this.orderBy = value;
+
+  }
 
 
 
